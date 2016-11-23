@@ -60,7 +60,7 @@ CMD:setvip(playerid, params[])
 	
     if (sscanf(params, "rii", id, interval, type))
     {
-        SendClientMessage(playerid, -1, "Usage: /setvip <ID/Part Of Name> <days> <interval> <type>");
+        SendClientMessage(playerid, -1, "Usage: /setvip <ID/Part Of Name> <interval> <type>");
         SendClientMessage(playerid, -1, "Types: 0 for \"day(s)\" and 1 for \"month(s)\"");
         return 1;
     }
