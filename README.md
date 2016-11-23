@@ -16,14 +16,8 @@ Sets a player as Vip for a certain amount of days/months (max: 1 year).
 
 
 
-type | represents for
----|---
-0 | day(s)
-1 | month(s)
-
-
-
-minimum amount of days (interval) | maximum amount (interval) | leap year
----|---|---
-1 | 365 | NO
-1 | 366 | YES
+type | minimum interval | maximum interval | leap year
+---|---|---|---
+0 | 1 day | 365 days | NO
+0 | 1 day | 366 days | YES
+1 | 1 month | 12 months | ---
