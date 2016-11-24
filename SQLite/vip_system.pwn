@@ -44,10 +44,15 @@ public OnPlayerDisconnect(playerid, reason)
 forward OnPlayerVipStatusExpire(playerid);
 public OnPlayerVipStatusExpire(playerid)
 {
+    new Query[55], player_name[MAX_PLAYER_NAME];
+    
+    GetPlayerName(playerid, player_name, MAX_PLAYER_NAME);
+    format(Query, sizeof Query, "DELETE FROM vips WHERE name='%q'", player_name);
+    db_query(g_SQL, Query);
+    
     SendClientMessage(playerid, -1, "Your VIP status has just expired!");
 	
     gPlayer_VipExpiration[playerid] = gPlayerTimer_VipExpiration[playerid] = 0;
-    return 1;
 }
 
 //-----------------------------------------------------
