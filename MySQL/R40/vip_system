@@ -19,7 +19,7 @@ static MySQL: g_SQL,
 
 public OnFilterScriptInit()
 {
-    mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE);
+    g_SQL = mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE);
     return 1;
 }
 
