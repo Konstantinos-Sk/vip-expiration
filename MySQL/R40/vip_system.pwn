@@ -147,7 +147,7 @@ CMD:setvip(playerid, params[])
         default: return SendClientMessage(playerid, -1, "Error: Type can only be 0 or 1 for \"day(s)\" and \"month(s)\" respectively.");
     }
 
-    SetVipStatus(playerid, interval, type);
+    SetVipStatus(id, interval, type);
     return 1;
 }
 
